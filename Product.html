@@ -13,12 +13,30 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky  top-0 z-30">
         <h1 class="text-3xl font-bold">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-9 h-7 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
+           <!--slide nav bar-->
+    <section id="slidenav" class="bg-green-100 fixed z-20 transition-all duration-1000 top-0 right-0" style="width: 50%; height: 100vh; right: -50%;">
+        <div>
+            <p id="closenav" class=" text-right cursor-pointer p-5">X</p>
+        </div>
 
-        <ul class="flex gap-5 text-gray-600 hidden md:flex">
+        <ul class=" flex flex-col gap-10 text-gray-600 items-center">
+            <li>
+                <a class=" hover:underline" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class=" hover:underline" href="Product.html">Product</a>
+            </li>
+            <li>
+                <a class=" hover:underline" href="contact.html">contact</a>
+            </li>
+        </ul>
+    </section>
+
+        <ul class="gap-5 text-gray-600 hidden md:flex">
             <li>
                 <a class=" hover:underline" href="index.html">Home</a>
             </li>
@@ -35,14 +53,35 @@
     <section class="text-center">
         <h1 class="text-4xl font-bold">Our Product</h1>
         <br>
-        <input type="text" class="border border-black p-2" style="width: 90%;height: 40px;"
+        <input id="search" type="text" class="border border-black p-2" style="width: 90%;height: 40px;"
             placeholder="Search for a Product......">
     </section>
     <!--Product-->
     <section>
         <div class="p-6 text-center ">
         </div>
-        <div class="p-7 grid grid-cols-2 text-center gap-5 md:grid-cols-4">
+        <div id="productcontainer" class="p-7 grid grid-cols-2 text-center gap-5 md:grid-cols-4">
+            <div>
+                <img src="pot1.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Red Rose</h1>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="pot2.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Pot Rose</h1>
+                <p>$20</p>
+
+            </div>
+            <div>
+                <img src="pot3.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Rose Different color</h1>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="pot4 (1).jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <h1>Rose color orange </h1>
+                <p>$20</p>
+            </div>
             <div>
                 <img src="pot1.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Rose</h1>
@@ -64,27 +103,7 @@
                 <h1>Rose</h1>
                 <p>$20</p>
             </div>
-            <div>
-                <img src="pot1.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose</h1>
-                <p>$20</p>
-            </div>
-            <div>
-                <img src="pot2.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose</h1>
-                <p>$20</p>
-
-            </div>
-            <div>
-                <img src="pot3.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose</h1>
-                <p>$20</p>
-            </div>
-            <div>
-                <img src="pot4 (1).jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose</h1>
-                <p>$20</p>
-            </div>
+            <h3 id="noresult"  style="display: none;">No More Related Searches<i class="fa-solid fa-face-grin-beam-sweat"></i></h3>
         </div>
     </section>
     <!--Booter-->
@@ -98,6 +117,7 @@
             <p>@ 2024 Greenden.com</p>
         </div>
     </section>
+    <script src="product.js"></script>
 </body>
 
 </html>

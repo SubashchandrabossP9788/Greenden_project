@@ -11,15 +11,15 @@
 </head>
 
 <body>
-    <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky  top-0 z-30">
+    <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky  top-0 z-20">
         <h1 class="text-3xl font-bold">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
-        <ul class="flex gap-5 text-gray-600 hidden md:flex">
+        <ul class="gap-5 text-gray-600 hidden md:flex">
             <li>
                 <a class=" hover:underline" href="index.html">Home</a>
             </li>
@@ -31,6 +31,24 @@
             </li>
         </ul>
     </nav>
+    <!--slide nav bar-->
+    <section id="slidenav" class="bg-green-100 fixed z-20 transition-all duration-1000 top-0 right-0" style="width: 50%; height: 100vh; right: -50%;">
+        <div>
+            <p id="closenav" class=" text-right cursor-pointer p-5">X</p>
+        </div>
+
+        <ul class=" flex flex-col gap-10 text-gray-600 items-center">
+            <li>
+                <a class=" hover:underline" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class=" hover:underline" href="Product.html">Product</a>
+            </li>
+            <li>
+                <a class=" hover:underline" href="contact.html">contact</a>
+            </li>
+        </ul>
+    </section>
     <!--Header Secton-->
     <section class="bg-green-100 p-4 md:p-10 flex justify-center">
         <div>
@@ -160,6 +178,7 @@
             <br>
             <p>@ 2024 Greenden.com</p>
         </div>
+        <script src="index.js"></script>
     </section>
 </body>
 
